@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'\u738b\u793c\u9e64'
-SITENAME = u'\u738b\u9e64\u7684\u535a\u5ba2'
+AUTHOR = u'王礼鹤'
+SITENAME = u'王礼鹤的博客'
 SITEURL = ''
 
 PATH = 'content'
