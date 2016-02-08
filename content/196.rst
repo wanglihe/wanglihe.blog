@@ -1,0 +1,10 @@
+习得性直觉
+##########
+:date: 2015-05-21 01:54
+:author: wanglihe
+:category: Uncategorized
+:slug: 196
+:status: draft
+
+| put,set顺序
+|  把东西放入，将xx设置为
