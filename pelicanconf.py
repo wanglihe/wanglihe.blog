@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'王礼鹤'
 SITENAME = u'王礼鹤的博客'
 SITEURL = ''
+SITESUBTITLE = u'——关注稳定实时高并发（学海无涯，回头是岸）（有钱就任性，没钱就认命）（麻雀虽小，五毒俱全）（并行是世界的本质，实时是生命的基础）'
 
 PATH = 'content'
 
