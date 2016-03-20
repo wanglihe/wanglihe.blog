@@ -1,0 +1,6 @@
+[submodule "theme/voidy-bootstrap"]
+	path = theme/voidy-bootstrap
+	url = https://github.com/wanglihe/voidy-bootstrap.git
+[submodule "pelican-plugins"]
+	path = pelican-plugins
+	url = https://github.com/wanglihe/pelican-plugins.git
