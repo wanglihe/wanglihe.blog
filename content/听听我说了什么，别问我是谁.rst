@@ -20,5 +20,5 @@
 
 简单的一句话，就是——听听我说了什么，别问我是谁。
 
-.. |fake| image:: http://blog.wanglihe.me/wp-content/uploads/2015/03/51xOYCLyjGL-300x300.jpg
-   :target: http://blog.wanglihe.me/wp-content/uploads/2015/03/51xOYCLyjGL.jpg
+.. |fake| image:: {filename}/images/51xOYCLyjGL.jpg
+   :target: {filename}/images/51xOYCLyjGL.jpg
