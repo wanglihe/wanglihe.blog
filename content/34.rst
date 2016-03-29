@@ -1,8 +1,0 @@
-No title [34]
-#############
-:date: 2015-05-11 14:01
-:author: wanglihe
-:slug: 34
-:status: published
-
-
