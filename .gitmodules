@@ -4,3 +4,6 @@
 [submodule "pelican-plugins"]
 	path = pelican-plugins
 	url = https://github.com/wanglihe/pelican-plugins.git
+[submodule "output"]
+	path = output
+	url = https://github.com/wanglihe/wanglihe.github.io.git
