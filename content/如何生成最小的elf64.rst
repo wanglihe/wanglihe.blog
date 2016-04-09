@@ -174,7 +174,7 @@ syscall，就可以得到直接进入系统调用的方法。于是代码是这�
      4001ab: 48 83 c8 ff or $0xffffffffffffffff,%rax
      4001af: c3 retq
 
-这里可以看到，系统编译了main函数，并且自动生成了syscall相关的几个函数，最终syscall这个函数执行了0f05（050f，大小尾的问题）这个指令叫syscall，是一个cpu指令。我们不需要什么错误之类的函数，为了尽量小，也不需要syscall这个函数，所以只要知道syscall这个指令怎么用了，查一下相关的x86\_64\ `手册 <http://www.x86-64.org/documentation/abi.pdf>`__\ ，看了一下，rax里是系统调用编号，rdi,rsi相关寄存器存调用参数。好了，那就开始用nasm重新来一下吧。首先得知道调用编号。
+这里可以看到，系统编译了main函数，并且自动生成了syscall相关的几个函数，最终syscall这个函数执行了0f05（050f，大小尾的问题）这个指令叫syscall，是一个cpu指令。我们不需要什么错误之类的函数，为了尽量小，也不需要syscall这个函数，所以只要知道syscall这个指令怎么用了，查一下相关的 `x86\_64\手册 <http://www.x86-64.org/documentation/abi.pdf>`_ ，看了一下，rax里是系统调用编号，rdi,rsi相关寄存器存调用参数。好了，那就开始用nasm重新来一下吧。首先得知道调用编号。
 
 .. code-block:: c
 
@@ -305,7 +305,7 @@ syscall，就可以得到直接进入系统调用的方法。于是代码是这�
 
 这里可以看到这个elf里还是有很多段的（session），基本上，我们只需要.text段，而其他的几个段是ld自动生成的，这个代码应该可以认为是ld生成程序的最小极限了，我没有找到用ld进一步缩减大小的方法，但是查elf的相关标准，除了programmer
 header是必选外，session
-header是可选的，也就是说，除了.text，其他的是可以删除进一步减小大小。这时我找到了一篇变态的\ `博客 <http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html>`__\ ，里面直接用bin的方法生成elf，也就是说将头的数据写进汇编代码。于是，照葫芦画瓢，我也来做了一个64位版的，但是我没那么变态将可执行部分进一步压缩，我是目的还是要生成一个结构完整的代码。代码如下：
+header是可选的，也就是说，除了.text，其他的是可以删除进一步减小大小。这时我找到了一篇 `变态的博客 <http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html>`_ ，里面直接用bin的方法生成elf，也就是说将头的数据写进汇编代码。于是，照葫芦画瓢，我也来做了一个64位版的，但是我没那么变态将可执行部分进一步压缩，我是目的还是要生成一个结构完整的代码。代码如下：
 
 .. code-block:: asm
 
